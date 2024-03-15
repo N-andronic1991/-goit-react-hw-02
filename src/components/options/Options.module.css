@@ -1,0 +1,17 @@
+.option {
+  width: fit-content;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid rgb(99, 126, 131);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: rgb(179, 202, 201);
+  color: black;
+}
+
+.option:hover {
+  background-color: cadetblue;
+  border-color: darkcyan;
+}

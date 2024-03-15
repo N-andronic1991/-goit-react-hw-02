@@ -1,0 +1,12 @@
+.title {
+  padding: 15px 15px 0px 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.description {
+  padding: 0px 15px 15px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
