@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 const App = () => {
   const initialFeedbacks = { good: 0, neutral: 0, bad: 0 };
+
   const [feedbackOptions, setFeedbackOptions] = useState(() => {
     const savedFeedback = window.localStorage.getItem('saved-feedback');
     const parsedFeedback = JSON.parse(savedFeedback) ?? initialFeedbacks;

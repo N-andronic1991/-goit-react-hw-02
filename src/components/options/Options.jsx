@@ -1,31 +1,23 @@
 import css from './Options.module.css';
+import PropTypes from 'prop-types';
 const Options = ({ updateFeedback, resetFeedbacks, totalFeedbacks }) => {
+  const options = ['good', 'neutral', 'bad'];
   return (
     <div>
-      <button
-        className={css.option}
-        onClick={() => {
-          updateFeedback('good');
-        }}
-      >
-        Good
-      </button>
-      <button
-        className={css.option}
-        onClick={() => {
-          updateFeedback('neutral');
-        }}
-      >
-        Neutral
-      </button>
-      <button
-        className={css.option}
-        onClick={() => {
-          updateFeedback('bad');
-        }}
-      >
-        Bad
-      </button>
+      {options.map(option => {
+        return (
+          <button
+            key={option}
+            className={css.option}
+            onClick={() => {
+              updateFeedback(option);
+            }}
+          >
+            {option}
+          </button>
+        );
+      })}
+
       {totalFeedbacks !== 0 && (
         <button className={css.option} onClick={resetFeedbacks}>
           Reset
@@ -35,3 +27,9 @@ const Options = ({ updateFeedback, resetFeedbacks, totalFeedbacks }) => {
   );
 };
 export default Options;
+
+Options.propTypes = {
+  updateFeedback: PropTypes.func.isRequired,
+  resetFeedbacks: PropTypes.func.isRequired,
+  totalFeedbacks: PropTypes.number.isRequired,
+};

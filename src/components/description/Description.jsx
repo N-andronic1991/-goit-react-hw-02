@@ -1,4 +1,5 @@
 import css from './Description.module.css';
+import PropTypes from 'prop-types';
 const Description = ({ name, description }) => {
   return (
     <>
@@ -8,3 +9,8 @@ const Description = ({ name, description }) => {
   );
 };
 export default Description;
+
+Description.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
